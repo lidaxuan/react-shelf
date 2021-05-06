@@ -1,6 +1,6 @@
 /**
  * @file 趣产品配置文件
- * @author svon.me@gmail.com
+ * @author 15201002062@163.com
  */
 
 export interface Domains {

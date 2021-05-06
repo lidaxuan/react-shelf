@@ -1,6 +1,12 @@
+/*
+ * @Description: 
+ * @Author: 李继玄（15201002062@163.com）
+ * @Date: 2020-12-27 10:03:38
+ * @FilePath: /react-shelf/src/test/images/index.tsx
+ */
 /**
  * @file 动态生成图片
- * @author svon.me@gmail.com
+ * @author 15201002062@163.com
  */
 
 
@@ -32,7 +38,10 @@ export default class Image extends Component<Props> {
   }
   render(): React.ReactElement {
     return (
-      <div style={ this.getStyle() }>
+      <div>
+        <div>
+          <img style={ this.getStyle() } src="https://dss2.bdstatic.com/lfoZeXSm1A5BphGlnYG/skin/749.jpg?2" alt=""/>
+        </div>
         <Source { ...this.props }/>
       </div>
     );

@@ -1,6 +1,6 @@
 /**
  * @file 父与子通信, 子与父交互
- * @author svon.me@gmail.com
+ * @author 15201002062@163.com
  */
 
 import React from 'react';

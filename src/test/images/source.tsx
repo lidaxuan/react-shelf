@@ -1,6 +1,6 @@
 /**
  * @file 函数式组建
- * @author svon.me@gmail.com
+ * @author 15201002062@163.com
  */
 import React from 'react';
 import { Props } from './props';

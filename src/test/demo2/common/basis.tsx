@@ -1,6 +1,6 @@
 /**
  * @file 表单基础部分
- * @author svon.me@gmail.com
+ * @author 15201002062@163.com
  */
 
 import _ from 'lodash';

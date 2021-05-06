@@ -1,6 +1,6 @@
 /**
  * @file 组建之间的数据交互
- * @author svon.me@gmail.com
+ * @author 15201002062@163.com
  */
 
 import React from 'react';

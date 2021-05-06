@@ -12,7 +12,8 @@ export const routers = {
   demo: {
     'one': '/demo/one',
     'two': '/demo/two',
-    'there': '/demo/there'
+    'there': '/demo/there',
+    'four': '/demo/four',
   },
   session: {
     starr: '/session/starr',  // 商品列表
@@ -84,6 +85,9 @@ export const routerMenus = [
       }, {
         name: '测试3',
         key: 'demo.there',
+      }, {
+        name: '测试4',
+        key: 'demo.four',
       }
     ]
   },

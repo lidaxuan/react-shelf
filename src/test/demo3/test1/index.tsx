@@ -1,6 +1,6 @@
 /**
  * @file 父与子通信
- * @author svon.me@gmail.com
+ * @author 15201002062@163.com
  */
 
 

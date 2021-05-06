@@ -1,6 +1,6 @@
 /**
  * @file 子组件接收数据
- * @author svon.me@gmail.com
+ * @author 15201002062@163.com
  */
 
 import React, { Component } from 'react';

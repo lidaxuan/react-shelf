@@ -45,7 +45,7 @@
     "type": "git",
     "url": "ssh://git@gitlab.com:s_von/react_test.git"
   },
-  "author": "svon.me@gmail.com",
+  "author": "15201002062@163.com",
   "license": "MIT",
   "eslintConfig": {
     "extends": ".eslintrc.js"
