@@ -27,10 +27,24 @@ async function main(env) {
       },
       hotOnly: true,
       progress: true,
-      host: '127.0.0.1',
+      host: 'localhost',
       port: config.port || 80,
       disableHostCheck: true,
       // public: `${config.domain}:${config.port || 80}`
+      proxy: {
+        "/wecom-business-web": {
+          target: "http://172.16.30.88:7175",
+          // target: "http://192.168.169.212:7175",
+          // target: "http://192.168.169.99:7175",
+          // target: "http://192.168.169.177:7175",
+          changeOrigin: true,
+          loglevel: "debug",
+          pathRewrite: {
+            "^/apis": "",
+          },
+          ws: true
+        }
+      },
     }
   };
   return Promise.resolve(Object.assign({}, data, option));

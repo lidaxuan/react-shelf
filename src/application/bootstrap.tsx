@@ -2,7 +2,7 @@
  * @Description: 
  * @Author: 李继玄（15201002062@163.com）
  * @Date: 2020-12-29 13:45:23
- * @FilePath: /react-ts-antvg6/src/application/bootstrap.tsx
+ * @FilePath: /react-shelf/src/application/bootstrap.tsx
  */
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-nocheck
@@ -19,9 +19,9 @@ import { getQuCloudsConfig } from 'src/model/config/quclouds';
 const bootstrap = async function(): void {
   try {
     // 获取趣系列配置信息
-    const config = await getQuCloudsConfig();
+    // const config = await getQuCloudsConfig();
     // 存储配置信息
-    setConfig(config);
+    // setConfig(config);
     // 获取用户信息
     // const user = await getUser();
     const user = {
@@ -54,8 +54,8 @@ const bootstrap = async function(): void {
     // 如果用户信息为空，则认为未登录
     if (!user) {
       // 跳转到登录页面
-      const href = `${config.domains.core}/user/sign/in?redirect=${window.location.href}`;
-      console.log(href);
+      // const href = `${config.domains.core}/user/sign/in?redirect=${window.location.href}`;
+      // console.log(href);
       
       // window.location.href = href;
       return false;
@@ -64,7 +64,7 @@ const bootstrap = async function(): void {
     console.log(error);
     // todo
   }
-  updateSession(); // 更新一次用户令牌信息
+  // updateSession(); // 更新一次用户令牌信息
   render(<Main/>, document.getElementById('app'));
 };
 

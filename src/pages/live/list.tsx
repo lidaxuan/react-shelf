@@ -1,8 +1,8 @@
 
 import React from 'react';
 import {Form,Input,Select,DatePicker, Button,Table, Pagination,Modal,message } from 'antd';
-import 'src/styles/orderList.scss';
-import 'src/styles/live.scss';
+// import 'src/styles/orderList.scss';
+// import 'src/styles/live.scss';
 import { Link } from 'react-router';
 import * as config from 'src/routers/config';
 import { getOrderList } from 'src/model/order';

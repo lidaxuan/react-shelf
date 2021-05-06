@@ -1,5 +1,11 @@
+/*
+ * @Description: 
+ * @Author: 李继玄（15201002062@163.com）
+ * @Date: 2020-12-29 13:45:23
+ * @FilePath: /react-shelf/src/pages/layout/header.tsx
+ */
 import React, { Component } from 'react';
-import logo from 'static/images/logo.png';
+// import logo from 'static/images/logo.png';
 import { Row, Col, Menu, Dropdown } from 'antd';
 import { CaretDownOutlined } from '@ant-design/icons';
 import { getUser } from 'src/model/user/index';
@@ -30,11 +36,12 @@ class Header extends Component<any, User> {
     return void 0;
   }
   private getMenu2Content(config: Config): React.ReactElement {
-    const signOut = `${config.domains.core}/user/sign/out?redirect=${process.env.domain}`;
-    const center = config.domains.center;
+    // const signOut = `${config.domains.core}/user/sign/out?redirect=${process.env.domain}`;
+    const signOut = `${config.domains}/user/sign/out?redirect=${process.env.domain}`;
+    // const center = config.domains.center || '';
     return (<Menu>
       <Menu.Item>
-        <a className="dibk" href={ center }>
+        <a className="dibk" href="javascript:;">
           <span className="font-12">账户管理</span>
         </a>
       </Menu.Item>

@@ -10,9 +10,14 @@
 export const routers = {
   dashboard: '/',
   demo: {
-    '1': '/demo/1',
-    '2': '/demo/2',
-    '3': '/demo/3'
+    'one': '/demo/one',
+    'two': '/demo/two',
+    'there': '/demo/there'
+  },
+  session: {
+    starr: '/session/starr',  // 商品列表
+    create: '/goods/create', // 商品创建
+    edit: '/goods/edit', // 商品编辑
   },
   goods: {
     list: '/good/list',  // 商品列表
@@ -66,157 +71,169 @@ export const routerMenus = [
     name: '首页',
     key: 'dashboard', // 通过 key 可以从 routers 获取 path 路径
   },
-  // {
-  //   name: '测试',
-  //   key: 'demo',
-  //   children: [
-  //     {
-  //       name: '测试1',
-  //       key: 'demo.1',
-  //     }, {
-  //       name: '测试2',
-  //       key: 'demo.2',
-  //     }, {
-  //       name: '测试3',
-  //       key: 'demo.3',
-  //     }
-  //   ]
-  // },
   {
-    name: '商品管理',
-    key: 'goods',
+    name: 'demo',
+    key: 'demo',
+    children: [
+      {
+        name: '测试1',
+        key: 'demo.one',
+      }, {
+        name: '测试2',
+        key: 'demo.two',
+      }, {
+        name: '测试3',
+        key: 'demo.there',
+      }
+    ]
+  },
+  {
+    name: '会话存档',
+    key: 'session',
     icon: 'icongoods',
     children: [
       {
-        name: '商品列表',
-        key: 'goods.list',
-        children: [
-          {
-            name: '添加商品',
-            hidden: true, // 该页面为商品列表子页面，不需要显示到菜单中
-            key: 'goods.create',
-          },
-          {
-            name: '编辑商品',
-            hidden: true, // 该页面为商品列表子页面，不需要显示到菜单中
-            key: 'goods.edit',
-          }
-        ]
+        name: '员工会话',
+        key: 'session.starr',
+        children: []
       },
     ]
   },
-  {
-    name: '订单管理',
-    key: 'order',
-    icon: 'iconorder',
-    children: [
-      {
-        name: '订单列表',
-        key: 'order.list',
-        children: [
-          // 订单列表中的订单详情
-          {
-            name: '订单详情',
-            hidden: true,
-            key: 'order.info',
-          },
-          // 申请详情下的订单详情
-          {
-            name: '订单详情',
-            hidden: true,
-            key: 'order.service.detail',
-          },
-          {
-            name: '申请详情',
-            hidden: true,
-            key: 'order.service.apply',
-          },
-          {
-            name: '审核处理',
-            hidden: true,
-            key: 'order.service.audit',
-          },
-          {
-            name: '退款处理',
-            hidden: true,
-            key: 'order.service.refund',
-          },
-        ]
-      },
+  // {
+  //   name: '商品管理',
+  //   key: 'goods',
+  //   icon: 'icongoods',
+  //   children: [
+  //     {
+  //       name: '商品列表',
+  //       key: 'goods.list',
+  //       children: [
+  //         {
+  //           name: '添加商品',
+  //           hidden: true, // 该页面为商品列表子页面，不需要显示到菜单中
+  //           key: 'goods.create',
+  //         },
+  //         {
+  //           name: '编辑商品',
+  //           hidden: true, // 该页面为商品列表子页面，不需要显示到菜单中
+  //           key: 'goods.edit',
+  //         }
+  //       ]
+  //     },
+  //   ]
+  // },
+  // {
+  //   name: '订单管理',
+  //   key: 'order',
+  //   icon: 'iconorder',
+  //   children: [
+  //     {
+  //       name: '订单列表',
+  //       key: 'order.list',
+  //       children: [
+  //         // 订单列表中的订单详情
+  //         {
+  //           name: '订单详情',
+  //           hidden: true,
+  //           key: 'order.info',
+  //         },
+  //         // 申请详情下的订单详情
+  //         {
+  //           name: '订单详情',
+  //           hidden: true,
+  //           key: 'order.service.detail',
+  //         },
+  //         {
+  //           name: '申请详情',
+  //           hidden: true,
+  //           key: 'order.service.apply',
+  //         },
+  //         {
+  //           name: '审核处理',
+  //           hidden: true,
+  //           key: 'order.service.audit',
+  //         },
+  //         {
+  //           name: '退款处理',
+  //           hidden: true,
+  //           key: 'order.service.refund',
+  //         },
+  //       ]
+  //     },
       
-    ]
-  },
-  {
-    name:'商城配置',
-    key:'shop',
-    icon:'iconorder',
-    children:[
-      {
-        name:'商城页面配置',
-        key:'shop.set'
-      }
-    ]
-  },
-  {
-    name: 'test',
-    key: 'test',
-    icon: 'iconorder',
-    children: [
-      {
-        name: '注入',
-        key: 'test.in'
-      },
-      {
-        name: '学习',
-        key: 'test.study'
-      }
-    ]
-  },
-  {
-    name: '收益管理',
-    key: 'earnings',
-    icon: 'iconorder',
-    children: [{
-      name: '收入列表',
-      key: 'earnings.earningsList'
-    }]
-  },
-  {
-    name:'主播管理',
-    key:'live',
-    icon:'iconorder',
-    children:[
-      {
-        name:'主播列表',
-        key:'live.list',
-        children: [
-          {
-            name: '添加主播',
-            hidden: true, // 该页面为商品列表子页面，不需要显示到菜单中
-            key: 'live.add',
-          },
-        ]
-      }
-    ]
-  },
-  {
-    name: '系统管理',
-    key: 'system',
-    icon: 'iconsetting',
-    children: [{
-      name: '商户设置',
-      key: 'system.group.info',
-      children: [
-        {
-          name: '分享信息',
-          key: 'system.group.share',
-          hidden: true,
-        }, {
-          name: '售后设置',
-          key: 'system.group.service',
-          hidden: true,
-        }
-      ]
-    }]
-  }
+  //   ]
+  // },
+  // {
+  //   name:'商城配置',
+  //   key:'shop',
+  //   icon:'iconorder',
+  //   children:[
+  //     {
+  //       name:'商城页面配置',
+  //       key:'shop.set'
+  //     }
+  //   ]
+  // },
+  // {
+  //   name: 'test',
+  //   key: 'test',
+  //   icon: 'iconorder',
+  //   children: [
+  //     {
+  //       name: '注入',
+  //       key: 'test.in'
+  //     },
+  //     {
+  //       name: '学习',
+  //       key: 'test.study'
+  //     }
+  //   ]
+  // },
+  // {
+  //   name: '收益管理',
+  //   key: 'earnings',
+  //   icon: 'iconorder',
+  //   children: [{
+  //     name: '收入列表',
+  //     key: 'earnings.earningsList'
+  //   }]
+  // },
+  // {
+  //   name:'主播管理',
+  //   key:'live',
+  //   icon:'iconorder',
+  //   children:[
+  //     {
+  //       name:'主播列表',
+  //       key:'live.list',
+  //       children: [
+  //         {
+  //           name: '添加主播',
+  //           hidden: true, // 该页面为商品列表子页面，不需要显示到菜单中
+  //           key: 'live.add',
+  //         },
+  //       ]
+  //     }
+  //   ]
+  // },
+  // {
+  //   name: '系统管理',
+  //   key: 'system',
+  //   icon: 'iconsetting',
+  //   children: [{
+  //     name: '商户设置',
+  //     key: 'system.group.info',
+  //     children: [
+  //       {
+  //         name: '分享信息',
+  //         key: 'system.group.share',
+  //         hidden: true,
+  //       }, {
+  //         name: '售后设置',
+  //         key: 'system.group.service',
+  //         hidden: true,
+  //       }
+  //     ]
+  //   }]
+  // }
 ];

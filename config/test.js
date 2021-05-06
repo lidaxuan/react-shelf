@@ -9,7 +9,7 @@
 const production = require('./production');
 
 const data = Object.assign(production, {
-  quclouds: 'http://qtest.core.myrtb.net/basis/config?secretkey=E3yN5mGvl4UgwQK7'
+  quclouds: ''
 });
 
 module.exports = data;

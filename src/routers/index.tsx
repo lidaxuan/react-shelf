@@ -4,10 +4,7 @@
  * @Date: 2021-01-21 09:40:52
  * @FilePath: /react-shelf/src/routers/index.tsx
  */
-/**
- * @file 路由定义
- * @author svon.me@gmail.com
- */
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 
 import React from 'react';
 import * as config from './config';
@@ -18,6 +15,8 @@ import { Router, Route, browserHistory, IndexRoute } from 'react-router';
 
 // 路由变化时触发
 const onUpdate = function (): void {
+  console.log(window.location.pathname);
+  
   // todo
   // const location = browserHistory.getCurrentLocation();
   // console.log(location);
@@ -31,12 +30,13 @@ const onUpdate = function (): void {
 const Routers: React.FC = function (): React.ReactElement {
   return (<Router history={browserHistory} onUpdate={onUpdate}>
     <Route path={config.routers.dashboard} component={Layout}>
-      <IndexRoute component={asnyc(() => import('src/pages/dashboard/index'))}></IndexRoute>
-      <Route path="/demo1" component={ asnyc(() => import('src/pages/antv/index'))}></Route>
+      <IndexRoute component={asnyc(() => import('src/pages/home/index'))}></IndexRoute>
+      {/* <Route path="/demo1" component={ asnyc(() => import('src/pages/antv/index'))}></Route> */}
       <Route path={ config.routers.test.study } component={ asnyc(() => import('src/pages/test/study'))}></Route>
-      {/* <Route path='/demo1' component={ asnyc(() => import('src/test/demo1/index')) }></Route>
-      <Route path='/demo2' component={ asnyc(() => import('src/test/demo4/p')) }></Route>
-      <Route path='/demo3' component={ asnyc(() => import('src/test/demo3/index')) }></Route> */}
+      <Route path={ config.routers.session.starr } component={ asnyc(() => import('src/pages/session/starr'))}></Route>
+      <Route path={ config.routers.demo.one } component={ asnyc(() => import('src/test/demo1/index')) }></Route>
+      <Route path={ config.routers.demo.two } component={ asnyc(() => import('src/test/demo2/index')) }></Route>
+      <Route path={ config.routers.demo.there } component={ asnyc(() => import('src/test/demo3/index')) }></Route>
       <Route path={ config.routers.goods.list } component={ asnyc(() => import('src/pages/goods/index')) }></Route>
       <Route path={config.routers.goods.create} component={asnyc(() => import('src/pages/goods/operation'))}></Route>
       <Route path={config.routers.goods.edit} component={asnyc(() => import('src/pages/goods/operation'))}></Route>

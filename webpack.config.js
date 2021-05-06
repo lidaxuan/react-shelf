@@ -7,10 +7,6 @@
  */
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-nocheck
-/**
- * @file webpack 配置
- * @author svon.me@gmail.com
- */
 
 const argv = require('@lijixuan/getargv');
 

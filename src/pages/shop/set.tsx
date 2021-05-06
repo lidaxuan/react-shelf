@@ -2,7 +2,7 @@
 import React from 'react';
 import {Form, Button,Radio,Cascader,Input,Table, Pagination,message  } from 'antd';
 import { FormInstance } from 'antd/lib/form';
-import 'src/styles/shopSet.scss';
+// import 'src/styles/shopSet.scss';
 import { Link } from 'react-router';
 import * as config from 'src/routers/config';
 import * as Search from 'src/utils/decorators/search';

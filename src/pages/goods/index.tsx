@@ -1,6 +1,7 @@
 /*
  * 商品列表页
  */
+
 import React, { Component } from 'react';
 import * as Search from 'src/utils/decorators/search';
 import * as serve from 'src/model/goods/goods';

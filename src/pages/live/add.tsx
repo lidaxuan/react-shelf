@@ -1,7 +1,7 @@
 
 import React from 'react';
 import {Form,Input, Button } from 'antd';
-import 'src/styles/live.scss';
+// import 'src/styles/live.scss';
 import * as config from 'src/routers/config';
 import { getOrderList } from 'src/model/order';
 
