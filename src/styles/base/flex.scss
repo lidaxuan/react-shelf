@@ -1,8 +1,3 @@
-/*
- * @file flex 常用布局
- * @author 15201002062@163.com
- */
-
 .flex {
   display: flex;
 }
@@ -25,17 +20,28 @@
   align-items: center;
 }
 .flex-aiend {
-  align-items: flex-end;
-}
-
-
-.flex-jcc {
-  justify-content: center;
+  align-items: end;
 }
 
 .flex-ccb {
   justify-content: space-between;
 }
-.flex-jcend{
+.flex-cca {
+  justify-content: space-around;
+}
+.flex-ccc {
+  justify-content: center;
+}
+.flex-end {
   justify-content: flex-end;
+}
+.flex-row-revers {
+  flex-direction: row-reverse;
+}
+.inherit {
+  flex: inherit;
+}
+
+.felx-asend {
+  align-self: flex-end;
 }

@@ -48,7 +48,7 @@ class Layout extends React.Component<Props, State> {
         <div className={ this.getLayoutClassName() }>
           <div className="app-layout-sider">
             <div className="sider-box">
-              <div className="flex flex-jcc flex-aic sider-menu" onClick={ this.onChangeFoldStatus }>
+              <div className="flex flex-ccc flex-aic sider-menu" onClick={ this.onChangeFoldStatus }>
                 <IconFont className="font-16" type="iconmenu"></IconFont>
               </div>
               <Sider fold={ this.state.fold }></Sider>

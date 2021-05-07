@@ -125,10 +125,10 @@ export default class DashBoard extends Component<Props, DashBoardState>  {
     return(
       <div>
         {/* <Button type="primary" onClick={this.fetchTableData}>查询</Button> */}
-        <div dangerouslySetInnerHTML={{ __html: JSON.stringify(this.state) }}></div>
         
         <div>
           <Table bordered dataSource={this.state.list} columns={columnsItem} pagination={false} rowKey="id" size="small"/>
+          <div dangerouslySetInnerHTML={{ __html: JSON.stringify(this.state) }}></div>
         </div>
       </div>
     );

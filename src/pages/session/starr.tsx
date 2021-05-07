@@ -120,7 +120,6 @@ export default class DashBoard extends Component<Props, DashBoardState>  {
     return(
       <div>
         <Button type="primary" onClick={this.getFieldValue}>查询</Button>
-        <div dangerouslySetInnerHTML={{ __html: JSON.stringify(this.state) }}></div>
         <div>
           { this.titleMenu() }
         </div>
@@ -138,6 +137,7 @@ export default class DashBoard extends Component<Props, DashBoardState>  {
           <Table.Column title="发布时间" dataIndex="created_at" key="created_at" width={180}></Table.Column>
           <Table.Column title="操作" dataIndex="created_at" key="created_at" width={180}></Table.Column>
         </Table>
+        <div dangerouslySetInnerHTML={{ __html: JSON.stringify(this.state) }}></div>
       </div>
     );
   }

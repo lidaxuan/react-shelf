@@ -4,7 +4,60 @@
  */
 
 
-@import "./base.scss";
+// @import "./base/index.scss";
+
+@import "./function.scss";
+@import "./base/init.scss";
+@import "./base/width.scss";
+@import "./base/radius.scss";
+@import "./base/padding.scss";
+@import "./base/margin.scss";
+@import "./base/height.scss";
+@import "./base/flex.scss";
+@import "./base/color.scss";
+@import "./base/font.scss";
+
+@each $list in (5, 10, 15, 20, 25, 30, 35, 40, 45, 50), (4, 6, 8, 12, 14, 16) {
+	@each $number in $list {
+		.m#{$number} {
+			margin: unit($number);
+		}
+		.ml#{$number} {
+			margin-left: unit($number);
+		}
+
+		.mt#{$number} {
+			margin-top: unit($number);
+		}
+
+		.mr#{$number} {
+		margin-right: unit($number);
+		}
+
+		.mb#{$number} {
+			margin-bottom: unit($number);
+		}
+		.p#{$number} {
+			padding: unit($number);
+		}
+		.pl#{$number} {
+			padding-left: unit($number);
+		}
+
+		.pt#{$number} {
+			padding-top: unit($number);
+		}
+
+		.pr#{$number} {
+			padding-right: unit($number);
+		}
+
+		.pb#{$number} {
+			padding-bottom: unit($number);
+		}
+	}
+}
+
 
 @mixin header($height){
 	height: $height;

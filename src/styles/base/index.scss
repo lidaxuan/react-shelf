@@ -1,0 +1,102 @@
+// @import "../function.scss";
+// @import "./init.scss";
+// @import "./width.scss";
+// @import "./radius.scss";
+// @import "./padding.scss";
+// @import "./margin.scss";
+// @import "./height.scss";
+// @import "./flex.scss";
+// @import "./color.scss";
+// @import "./font.scss";
+
+.pointer {
+  cursor: pointer;
+}
+
+.overauto {
+  overflow: auto !important;
+}
+
+.dib {
+  display: inline-block;
+}
+.dbk {
+  display: block;
+}
+
+.none {
+  display: none
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.clearfix::after {
+  content: '';
+  clear: both;
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+
+.ellipsis {
+  max-width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  word-wrap: normal;
+}
+.text-over {
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+//ooclass
+.ta-l {
+  text-align: left;
+}
+
+.ta-c {
+  text-align: center;
+}
+
+.ta-r {
+  text-align: right;
+}
+
+
+.hidden {
+  overflow: hidden;
+}
+
+
+.disabled {
+  cursor: not-allowed !important;
+
+  &:hover {
+    color: #c0c4cc !important;
+  }
+}
+
+/* 分割线 */
+.dividing-line {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  height:4px;
+  background: $grey;
+}
+
+.wmax {
+  width: 100%;
+}
+
+.hmax {
+  height: 100%;
+}
+
+.shadow {
+  box-shadow:#ccc 0px 0px 6px;
+}
