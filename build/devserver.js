@@ -25,6 +25,7 @@ async function main(env) {
           { from: /.*/, to: '/index.html' },
         ]
       },
+      hot: true,
       hotOnly: true,
       progress: true,
       host: 'localhost',

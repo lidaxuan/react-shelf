@@ -39,6 +39,9 @@ const Routers: React.FC = function (): React.ReactElement {
         <Route path={ config.routers.demo.two } component={ asnyc(() => import('src/test/demo2/index')) }></Route>
         <Route path={ config.routers.demo.there } component={ asnyc(() => import('src/test/demo3/index')) }></Route>
         <Route path={ config.routers.demo.four } component={ asnyc(() => import('src/test/demo5/index')) }></Route>
+        <Route path={ config.routers.test.selectTable } component={ asnyc(() => import('src/pages/test/selectTable')) }></Route>
+        <Route path={ config.routers.test.distributionOfApplications } component={ asnyc(() => import('src/pages/test/distributionOfApplications')) }></Route>
+        <Route path={ config.routers.test.scroll } component={ asnyc(() => import('src/pages/test/scroll')) }></Route>
         {/* <Route path={ config.routers.goods.list } component={ asnyc(() => import('src/pages/goods/index')) }></Route>
         <Route path={config.routers.goods.create} component={asnyc(() => import('src/pages/goods/operation'))}></Route>
         <Route path={config.routers.goods.edit} component={asnyc(() => import('src/pages/goods/operation'))}></Route>

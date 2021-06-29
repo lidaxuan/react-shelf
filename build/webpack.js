@@ -151,7 +151,7 @@ const main = function (env) {
       ]
     },
     externals: {
-      "lodash": "_",
+      // "lodash": "_",
       // "react": "React",
       // "react-dom": "ReactDOM",
       // "react-router": "ReactRouter",

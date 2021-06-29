@@ -38,6 +38,9 @@ export const routers = {
   test: {
     in: '/test/in', // 注入
     study: '/test/study', // 注入
+    selectTable: '/test/selectTable', // 
+    distributionOfApplications: '/test/distributionOfApplications', // 
+    scroll: '/test/scroll', // 
   },
   shop:{
     set:'/shop/set' //首页轮播配置
@@ -178,21 +181,33 @@ export const routerMenus = [
   //     }
   //   ]
   // },
-  // {
-  //   name: 'test',
-  //   key: 'test',
-  //   icon: 'iconorder',
-  //   children: [
-  //     {
-  //       name: '注入',
-  //       key: 'test.in'
-  //     },
-  //     {
-  //       name: '学习',
-  //       key: 'test.study'
-  //     }
-  //   ]
-  // },
+  {
+    name: 'test',
+    key: 'test',
+    icon: 'iconorder',
+    children: [
+      {
+        name: '注入',
+        key: 'test.in'
+      },
+      {
+        name: '学习',
+        key: 'test.study'
+      },
+      {
+        name: '表格选择',
+        key: 'test.selectTable'
+      },
+      {
+        name: '表格',
+        key: 'test.distributionOfApplications'
+      },
+      {
+        name: '滚动',
+        key: 'test.scroll'
+      },
+    ]
+  },
   // {
   //   name: '收益管理',
   //   key: 'earnings',
