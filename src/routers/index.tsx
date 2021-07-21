@@ -33,15 +33,18 @@ const Routers: React.FC = function (): React.ReactElement {
       <Route path={config.routers.dashboard} component={Layout}>
         <IndexRoute component={asnyc(() => import('src/pages/home/index'))}></IndexRoute>
         {/* <Route path="/demo1" component={ asnyc(() => import('src/pages/antv/index'))}></Route> */}
-        {/* <Route path={ config.routers.test.study } component={ asnyc(() => import('src/pages/test/study'))}></Route> */}
+        <Route path={ config.routers.test.study } component={ asnyc(() => import('src/pages/test/study'))}></Route>
         <Route path={ config.routers.session.starr } component={ asnyc(() => import('src/pages/session/starr'))}></Route>
         <Route path={ config.routers.demo.one } component={ asnyc(() => import('src/test/demo1/index')) }></Route>
         <Route path={ config.routers.demo.two } component={ asnyc(() => import('src/test/demo2/index')) }></Route>
         <Route path={ config.routers.demo.there } component={ asnyc(() => import('src/test/demo3/index')) }></Route>
         <Route path={ config.routers.demo.four } component={ asnyc(() => import('src/test/demo5/index')) }></Route>
+        <Route path={ config.routers.test.in } component={ asnyc(() => import('src/pages/test/in')) }></Route>
         <Route path={ config.routers.test.selectTable } component={ asnyc(() => import('src/pages/test/selectTable')) }></Route>
         <Route path={ config.routers.test.distributionOfApplications } component={ asnyc(() => import('src/pages/test/distributionOfApplications')) }></Route>
         <Route path={ config.routers.test.scroll } component={ asnyc(() => import('src/pages/test/scroll')) }></Route>
+        <Route path={ config.routers.test.asdasdasdas } component={ asnyc(() => import('src/pages/test/asdasdasdas')) }></Route>
+        <Route path={ config.routers.test.loading } component={ asnyc(() => import('src/pages/test/loading')) }></Route>
         {/* <Route path={ config.routers.goods.list } component={ asnyc(() => import('src/pages/goods/index')) }></Route>
         <Route path={config.routers.goods.create} component={asnyc(() => import('src/pages/goods/operation'))}></Route>
         <Route path={config.routers.goods.edit} component={asnyc(() => import('src/pages/goods/operation'))}></Route>

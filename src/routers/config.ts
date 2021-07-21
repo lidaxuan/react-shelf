@@ -41,16 +41,18 @@ export const routers = {
     selectTable: '/test/selectTable', // 
     distributionOfApplications: '/test/distributionOfApplications', // 
     scroll: '/test/scroll', // 
+    asdasdasdas: '/test/asdasdasdas', // 
+    loading: '/test/loading'
   },
-  shop:{
-    set:'/shop/set' //首页轮播配置
+  shop: {
+    set: '/shop/set' //首页轮播配置
   },
   earnings: {
     earningsList: '/earnings/list'
   },
-  live:{
-    list:'/live/list', //直播列表
-    add:'/live/add' //添加主播
+  live: {
+    list: '/live/list', //直播列表
+    add: '/live/add' //添加主播
   },
   system: {
     group: {
@@ -106,29 +108,42 @@ export const routerMenus = [
       },
     ]
   },
-  // {
-  //   name: '商品管理',
-  //   key: 'goods',
-  //   icon: 'icongoods',
-  //   children: [
-  //     {
-  //       name: '商品列表',
-  //       key: 'goods.list',
-  //       children: [
-  //         {
-  //           name: '添加商品',
-  //           hidden: true, // 该页面为商品列表子页面，不需要显示到菜单中
-  //           key: 'goods.create',
-  //         },
-  //         {
-  //           name: '编辑商品',
-  //           hidden: true, // 该页面为商品列表子页面，不需要显示到菜单中
-  //           key: 'goods.edit',
-  //         }
-  //       ]
-  //     },
-  //   ]
-  // },
+  {
+    name: 'test',
+    key: 'test',
+    icon: 'iconorder',
+    children: [
+      {
+        name: '注入',
+        key: 'test.in'
+      },
+      {
+        name: '学习',
+        key: 'test.study'
+      },
+      {
+        name: '表格选择',
+        key: 'test.selectTable'
+      },
+      {
+        name: '表格',
+        key: 'test.distributionOfApplications'
+      },
+      {
+        name: '滚动',
+        key: 'test.scroll'
+      },
+      {
+        name: '测试styled',
+        key: 'test.asdasdasdas'
+      },
+      {
+        name: 'loading',
+        key: 'test.loading'
+      },
+      
+    ]
+  },
   // {
   //   name: '订单管理',
   //   key: 'order',
@@ -167,7 +182,7 @@ export const routerMenus = [
   //         },
   //       ]
   //     },
-      
+
   //   ]
   // },
   // {
@@ -181,33 +196,7 @@ export const routerMenus = [
   //     }
   //   ]
   // },
-  {
-    name: 'test',
-    key: 'test',
-    icon: 'iconorder',
-    children: [
-      {
-        name: '注入',
-        key: 'test.in'
-      },
-      {
-        name: '学习',
-        key: 'test.study'
-      },
-      {
-        name: '表格选择',
-        key: 'test.selectTable'
-      },
-      {
-        name: '表格',
-        key: 'test.distributionOfApplications'
-      },
-      {
-        name: '滚动',
-        key: 'test.scroll'
-      },
-    ]
-  },
+
   // {
   //   name: '收益管理',
   //   key: 'earnings',

@@ -1,5 +1,12 @@
+/*
+ * @Description: 
+ * @Author: 李大玄
+ * @Date: 2021-01-05 10:55:23
+ * @FilePath: /react-shelf/src/pages/test/in.tsx
+ */
 import React, { Component } from 'react';
 import { Button } from 'antd';
+import * as Loading from 'src/utils/decorators/loading';
 
 function addTwo() {
   return function (target: any, methodName: string, descriptor: PropertyDescriptor) {

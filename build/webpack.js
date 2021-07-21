@@ -9,6 +9,7 @@ const getSass = require('./sass');
 const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+// const babelPluginStyledComponents = require("babel-plugin-styled-components");
 
 
 const getOutput = function (env) {
@@ -137,6 +138,7 @@ const main = function (env) {
             },
           ],
         },
+        
         // {
         //   test: /\.(png|jpe?g|gif)$/,
         //   use: [

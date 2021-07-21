@@ -92,7 +92,6 @@ export default class Demo1 extends Component<any, any> {
       window.open(down_url);
     } else {
       const data = { anchor_id: selectedItem, start_date, end_date, type: "list" };
-      console.log('data: ', data);
       const { down_url } = await serve.profitExport(data);
       window.open(down_url);
     }

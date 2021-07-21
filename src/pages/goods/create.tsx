@@ -1,3 +1,9 @@
+/*
+ * @Description: 
+ * @Author: 李大玄
+ * @Date: 2021-01-21 09:40:52
+ * @FilePath: /react-shelf/src/pages/goods/create.tsx
+ */
 /**
  * @file 添加商品
  */
@@ -21,7 +27,6 @@ export default class Create extends GoodsBasis<any, any> {
     state.detail_img = _.compact(state.detail_img);
     state.humbnail_img = _.compact(state.humbnail_img);
 
-    console.log(state);
 
     // // this.state.goods_category = 1
     // let obj = {..._.cloneDeep(this.state)};
@@ -39,7 +44,6 @@ export default class Create extends GoodsBasis<any, any> {
 
     // // let a  = obj.goods_category[0];
     // obj = _.omit(obj, ['addClass', 'producSpecifications','tableList', 'categoryList', 'classKey']);
-    // console.log(obj);
     
     // const { id } = await goodsAdd(obj);
     // if (id) {

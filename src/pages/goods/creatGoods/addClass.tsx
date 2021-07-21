@@ -79,7 +79,6 @@ export default class EditAddress extends Component<Props, State> {
       });
       message.success("添加成功");
     } catch (error) {
-      console.log(error, 's');
       message.error('添加失败');
     }
     
@@ -99,7 +98,6 @@ export default class EditAddress extends Component<Props, State> {
       });
       message.success("删除成功");
     } catch (error) {
-      console.log(error, 's');
       message.error('删除失败');
     }
     
@@ -124,7 +122,6 @@ export default class EditAddress extends Component<Props, State> {
       });
       message.success("删除成功");
     } catch (error) {
-      console.log(error, 's');
       message.error('删除失败');
     }
     
@@ -151,12 +148,10 @@ export default class EditAddress extends Component<Props, State> {
   // 表单数据修改
   protected onChangeValues(values: State): void {
     // 表单数据
-    console.log(values);
   }
 
   // 获取表单数据
   protected onFinish() {
-    console.log(this.state.menu);
     
   }
   // 输入框发生变化

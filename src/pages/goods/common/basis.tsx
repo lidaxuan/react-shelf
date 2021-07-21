@@ -816,7 +816,6 @@ export default abstract class Goods<Props extends GoodsProps, State extends Inte
     }
   }
   addClassOk() {
-    console.log('1');
     
   }
   /** 添加类目 ---------------------------- */

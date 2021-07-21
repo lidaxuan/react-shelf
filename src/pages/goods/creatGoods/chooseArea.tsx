@@ -46,7 +46,6 @@ class ChooseArea extends React.Component {
   };
 
   onChange = value => {
-    console.log('onChange ', value);
     this.setState({ value });
   };
 

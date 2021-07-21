@@ -48,12 +48,10 @@ export default class DashBoard extends Component<Props, DashBoardState>  {
   }
   // 
   componentDidMount() {
-    console.log(1);
     
   }
  
   handleClick(e) {
-    console.log(e);
     
     this.setState({ currentComp: e.key });
   }
@@ -69,7 +67,6 @@ export default class DashBoard extends Component<Props, DashBoardState>  {
       const { current } = this.formRef;
       if (current && current.getFieldsValue) {
         const value: T = current.getFieldsValue();
-        console.log(value);
         return value;
       }
     }

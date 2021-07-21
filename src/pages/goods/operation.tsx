@@ -116,7 +116,6 @@ export default class List extends Component<any, any> {
         isEdit: false
       });
     }
-    console.log(this.props.location.query.id, 'id');
     // setTimeout(() => {
     //   this.bigForm.current.setFieldsValue({'detail': '<p>qeqwe</p>'});
     //   this.bigForm.current.setFieldsValue({'more_sku': 2});
@@ -216,7 +215,6 @@ export default class List extends Component<any, any> {
       this.setState({
         allAnchorList: data
       });
-      console.log(data, 'zhubo');
     } catch (error) {
       message.error('接口报错');
     }
@@ -424,7 +422,6 @@ export default class List extends Component<any, any> {
   delGoodsSku(index) {
     const newList = JSON.parse(JSON.stringify(this.state.goods_sku));
     newList.splice(index, 1);
-    console.log(index, newList, 'aaa');
     this.setState({
       goods_sku: newList
     });
@@ -674,7 +671,6 @@ export default class List extends Component<any, any> {
     const db = new DB([], 'id', 'pid');
     db.insert(db.flatten(this.state.treeData, 'children'));
     const list = db.parentDeepFlatten({value: val});
-    console.log(list);
   }
   // 主播列表
   getGoodsAnchorNode (): React.ReactNode {
@@ -694,8 +690,6 @@ export default class List extends Component<any, any> {
   }
   // 保存
   saveFn() {
-    console.log(this.state.humbnail_img, this.state.detail_img, this.state.video);
-    console.log(this.state.goods_sku);
     if (this.state.goods_sku.length <= 0) {
       message.warning('请添加规格');
       return;
@@ -773,7 +767,6 @@ export default class List extends Component<any, any> {
             const db = new DB([], 'id', 'pid');
             db.insert(db.flatten(this.state.treeData, 'children'));
             const list = db.parentDeepFlatten({value: item});
-            console.log(list);
             goods_delivery_area.push({
               province_code: list[0] ? list[0]['value'] : 0,
               city_code: list[1] ? list[1]['value'] : 0,
@@ -802,7 +795,6 @@ export default class List extends Component<any, any> {
         this.setState({
           loading: true
         });
-        console.log(query, 'sss');
         if (this.state.isEdit) {
           query['id'] = this.props.location.query.id;
           await goodsEdit(query);
@@ -815,14 +807,12 @@ export default class List extends Component<any, any> {
         
         browserHistory.goBack();
       } catch (error) {
-        console.log(error);
         this.setState({
           loading: false
         });
         message.error('添加失败');
       }
     });
-    console.log('save');
   }
   // 取消
   closeFn() {
@@ -830,14 +820,11 @@ export default class List extends Component<any, any> {
   }
   render () {
     const onFinish = (values: any) => {
-      console.log(values);
     };
     const onFinishFailed = (values: any) => {
-      console.log(values);
     };
     // form表单修改
     const onChangeValues = (data: FormData): void => {
-      console.log('form表单修改的值：', data);
       const state = this.transformData(data);
       this.setState(state);
     };

@@ -2,14 +2,14 @@
  * @Description: 
  * @Author: 李继玄（15201002062@163.com）
  * @Date: 2021-01-28 10:25:09
- * @FilePath: /react-ts/src/pages/test/classify/mouseMove.tsx
+ * @FilePath: /react-shelf/src/pages/test/classify/mouseMove.tsx
  */
 import React from 'react';
 class Cat extends React.Component<any, any> {
   render() {
     const mouse = this.props.mouse;
     return (
-      <img src="/cat.jpg" style={{ position: 'absolute', left: mouse.x, top: 200 }} />
+      <img src="https://dss2.bdstatic.com/lfoZeXSm1A5BphGlnYG/skin/749.jpg?2" style={{ position: 'absolute', left: mouse.x, top: mouse.y, width: '100px', height: '100px' }} />
     );
   }
 }
@@ -20,14 +20,14 @@ class MouseWithCat extends React.Component<any, any> {
     this.handleMouseMove = this.handleMouseMove.bind(this);
     this.state = { x: 0, y: 0 };
   }
-
   handleMouseMove(event) {
+    console.log(event);
+    
     this.setState({
       x: event.clientX,
       y: event.clientY
     });
   }
-
   render() {
     return (
       <div style={{ height: '100vh' }} onMouseMove={this.handleMouseMove}>

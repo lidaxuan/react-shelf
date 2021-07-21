@@ -138,7 +138,6 @@ export default class Specifications extends Component<any, any> {
   }
   // 添加规格值按钮
   handleAdd (value){
-    console.log('value: ', value);
     // this.setState({
     //   dataSource: [...this.state.dataSource, value]
     // });

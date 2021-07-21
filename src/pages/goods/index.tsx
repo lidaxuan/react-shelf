@@ -61,7 +61,6 @@ export default class List extends Component<any, any> {
     this.setState({
       page: 1
     });
-    console.log(this.state, 'change');
   }
   changeStatus(data: any): void {
     this.setState({
@@ -88,7 +87,6 @@ export default class List extends Component<any, any> {
       list: data.data,
       total: data.total
     });
-    // console.log(data, 'data------------');
   }
   // 下载
   private async downloadFn(): Promise<void> {
@@ -107,9 +105,7 @@ export default class List extends Component<any, any> {
           query['status'] = this.state.status;
         }
       }
-      console.log(this.state.selectedRowKeys, 'keys');
       const data = await serve.exportList(query);
-      console.log(data, 'sss');
 
       const oa = document.createElement('a');
       oa.href = `${data.down_url}`;
@@ -278,10 +274,8 @@ export default class List extends Component<any, any> {
             page: 1
           });
           that.getList();
-          console.log(record, 'OK');
         },
         onCancel() {
-          console.log('Cancel');
         },
       });
     } else {
@@ -301,10 +295,8 @@ export default class List extends Component<any, any> {
             page: 1
           });
           that.getList();
-          console.log(record, 'OK');
         },
         onCancel() {
-          console.log('Cancel');
         },
       });
     }
@@ -362,10 +354,8 @@ export default class List extends Component<any, any> {
           page: 1
         });
         that.getList();
-        console.log(record, 'OK');
       },
       onCancel() {
-        console.log('Cancel');
       },
     });
   }
@@ -389,10 +379,8 @@ export default class List extends Component<any, any> {
           page: 1
         });
         that.getList();
-        console.log(record, 'OK');
       },
       onCancel() {
-        console.log('Cancel');
       },
     });
   }

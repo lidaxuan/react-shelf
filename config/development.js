@@ -8,7 +8,7 @@
 const production = require('./production');
 
 const data = Object.assign(production, {
-  port: 8080,
+  port: 4586,
   domain: '',
 });
 

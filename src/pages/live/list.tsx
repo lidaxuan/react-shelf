@@ -128,7 +128,6 @@ export default class LiveList extends React.Component<any,any> {
   }
   //删除主播
   private async delLive(record) :Promise<void>{
-    console.log(record,'record');
     //const that = this;
     confirm({
       title: '提示',
@@ -146,15 +145,12 @@ export default class LiveList extends React.Component<any,any> {
         //   page: 1
         // });
         //that.getList();
-        console.log(record, 'OK');
       },
       onCancel() {
-        console.log('Cancel');
       },
     });
   }
   private async stopLive(record): Promise<void> {
-    console.log(record,'record');
     //const that = this;
     confirm({
       title: '提示',
@@ -172,10 +168,8 @@ export default class LiveList extends React.Component<any,any> {
         //   page: 1
         // });
         //that.getList();
-        console.log(record, 'OK');
       },
       onCancel() {
-        console.log('Cancel');
       },
     });
   }

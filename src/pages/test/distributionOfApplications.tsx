@@ -70,11 +70,8 @@ export default class SelectTable extends Component<Props, DashBoardState>  {
     });
   }
   sorter(a,b, sorter) {
-    console.log(a,b, sorter);
     if (sorter.order === "ascend") {
-      console.log('升序');
     } else if (sorter.order === 'descend') {
-      console.log('降序');
     }
   }
  
@@ -82,14 +79,11 @@ export default class SelectTable extends Component<Props, DashBoardState>  {
     const rowSelection = {
       selectedRowKeys: this.state.selectedRowKeys,
       onChange: (selectedRowKeys, selectedRows) => {
-        console.log(selectedRowKeys, selectedRows);
         
       },
       onSelect: (record, selected, selectedRows) => {
-        console.log(record, selected, selectedRows);
       },
       onSelectAll: (selected, selectedRows, changeRows) => {
-        console.log(selected, selectedRows, changeRows);
       },
     };
     const { checkStrictly } = this.state;

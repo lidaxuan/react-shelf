@@ -65,7 +65,6 @@ export default class ShopSet extends React.Component<any,any> {
   @Loading.Fun()
   @Message() // 处理接口异常
   protected onFinish(value){
-    console.log(value,'value');
     this.setState({
       bannerInfo:{
         id: this.state.bannerInfo.id,
@@ -108,7 +107,6 @@ export default class ShopSet extends React.Component<any,any> {
       this.setState({
         selectedRowKeys:[].concat(data.join_id)
       },()=>{
-        console.log(this.state.selectedRowKeys);
       });
     }
   }

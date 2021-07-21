@@ -31,7 +31,6 @@ export default class Edit extends GoodsBasis<any, any> {
 
     // let a  = obj.goods_category[0];
     obj = _.omit(obj, ['addClass', 'producSpecifications','tableList', 'categoryList', 'classKey']);
-    console.log(obj);
     
     const { id } = await goodsEdit(obj);
     if (id) {
@@ -70,7 +69,6 @@ export default class Edit extends GoodsBasis<any, any> {
     const newArr = emptyDb.flatten(categoryList, 'child');
     const db = new DB(newArr, 'id', 'pid');
     const current = _.first(db.select({id: categoryId}));
-    console.log(current);
     const par = _.first(db.select({id: current['pid'] || ''}));
     if (par && _.keys(par).length) {
       return [par['id']];
@@ -109,7 +107,6 @@ export default class Edit extends GoodsBasis<any, any> {
       isCreate: false,
       id: res.id
     };
-    console.log(state);
     
     if (res.limit_member) {
       state.limit_member_value = true;
@@ -121,7 +118,6 @@ export default class Edit extends GoodsBasis<any, any> {
     } else {
       state.limit_period = [];
     }
-    console.log(state);
     
     return state;
   }

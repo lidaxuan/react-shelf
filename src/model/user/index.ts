@@ -13,8 +13,6 @@ export const getUser = async function() {
   const url = `${api.host}${api.basePath}${api.userdetail}`;
   try {
     const user = await axios.get(url);
-    console.log(user);
-    
     return user;
   } catch (error) {
     return void 0;

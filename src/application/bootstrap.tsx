@@ -55,13 +55,11 @@ const bootstrap = async function(): void {
     if (!user) {
       // 跳转到登录页面
       // const href = `${config.domains.core}/user/sign/in?redirect=${window.location.href}`;
-      // console.log(href);
       
       // window.location.href = href;
       return false;
     }
   } catch (error) {
-    console.log(error);
     // todo
   }
   // updateSession(); // 更新一次用户令牌信息
