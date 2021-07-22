@@ -45,6 +45,8 @@ const Routers: React.FC = function (): React.ReactElement {
         <Route path={ config.routers.test.scroll } component={ asnyc(() => import('src/pages/test/scroll')) }></Route>
         <Route path={ config.routers.test.asdasdasdas } component={ asnyc(() => import('src/pages/test/asdasdasdas')) }></Route>
         <Route path={ config.routers.test.loading } component={ asnyc(() => import('src/pages/test/loading')) }></Route>
+        <Route path={ config.routers.test.reactLazy } component={ asnyc(() => import('src/pages/test/reactLazy')) }></Route>
+        <Route path={ config.routers.test.scrollText } component={ asnyc(() => import('src/pages/test/scrollText')) }></Route>
         {/* <Route path={ config.routers.goods.list } component={ asnyc(() => import('src/pages/goods/index')) }></Route>
         <Route path={config.routers.goods.create} component={asnyc(() => import('src/pages/goods/operation'))}></Route>
         <Route path={config.routers.goods.edit} component={asnyc(() => import('src/pages/goods/operation'))}></Route>

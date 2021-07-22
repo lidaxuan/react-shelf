@@ -42,7 +42,9 @@ export const routers = {
     distributionOfApplications: '/test/distributionOfApplications', // 
     scroll: '/test/scroll', // 
     asdasdasdas: '/test/asdasdasdas', // 
-    loading: '/test/loading'
+    loading: '/test/loading',
+    reactLazy: '/test/reactLazy',
+    scrollText: '/test/scrollText',
   },
   shop: {
     set: '/shop/set' //首页轮播配置
@@ -140,6 +142,14 @@ export const routerMenus = [
       {
         name: 'loading',
         key: 'test.loading'
+      },
+      {
+        name: 'reactLazy',
+        key: 'test.reactLazy'
+      },
+      {
+        name: 'scrollText',
+        key: 'test.scrollText'
       },
       
     ]

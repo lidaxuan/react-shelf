@@ -3,7 +3,6 @@
  * @author 15201002062@163.com
  */
 
-
 // @import "./base/index.scss";
 
 @import "./function.scss";
@@ -32,7 +31,7 @@
 		}
 
 		.mr#{$number} {
-		margin-right: unit($number);
+			margin-right: unit($number);
 		}
 
 		.mb#{$number} {
@@ -59,69 +58,66 @@
 	}
 }
 
-
-@mixin header($height){
+@mixin header($height) {
 	height: $height;
 	padding-left: 0;
 	line-height: 1em;
 	padding: 0;
 	background-color: $color-white;
 	box-shadow: 0 4px 4px 0 #e0edf9;
-  .logo {
+	.logo {
 		width: 37px;
 		height: 37px;
 		display: block;
-  }
-  .portrait {
+	}
+	.portrait {
 		width: 38px;
 		height: 38px;
 		border-radius: 50%;
 		overflow: hidden;
-  }
+	}
 }
 
-@mixin sider($width, $foldWidth,$headerHeight) {
+@mixin sider($width, $foldWidth, $headerHeight) {
 	height: 100%;
-	overflow-y: auto;
 	$menuHeight: 60px;
 	.ant-menu {
 		border-right: 0;
 	}
 	.sider-box {
-		width: 100%;
+		width: 180px;
 		height: 100%;
-		padding-top: $menuHeight;
-		position: relative;
+		display: flex;
+		flex-direction: column;
 		overflow-y: auto;
+		overflow-x: hidden;
 	}
 	.sider-menu {
-		position: fixed;
-		left: 0;
-		top: $headerHeight;
 		width: $width;
 		height: $menuHeight;
 		background-color: $color-white;
 		z-index: 2;
 		transition: all 0.3s;
 		.anticon {
-		cursor: pointer;
+			cursor: pointer;
 		}
 	}
 	@at-root {
 		.fold {
-		.sider-menu {
-			width: $foldWidth !important;
-		}
+			.sider-menu {
+				width: $foldWidth !important;
+			}
 		}
 	}
 }
 
-html, body {
+html,
+body {
 	left: 0;
 	top: 0;
 	right: 0;
 	bottom: 0;
-	position: absolute;
+	// position: absolute;
 }
 
 #app {
@@ -133,43 +129,36 @@ html, body {
 	$headerHeight: 50px;
 	$siderWidth: 180px;
 	$siderFoldWidth: 90px;
-	padding-top: $headerHeight;
+	// padding-top: $headerHeight;
 	height: 100%;
 	.header-box {
-		position: fixed;
-		left: 0;
-		top: 0;
-		right: 0;
-		z-index: 99;
 		@include header($headerHeight);
 	}
 
 	.app-layout-main {
-		min-height: 100%;
+		// min-height: 100%;
+		height: calc(100% - 50px);
 		background: #f5fafe;
-		padding-left: $siderWidth;
-		height: 100%;
+		display: flex;
 		.app-layout-sider {
-		position: fixed;
-		left: 0;
-		bottom: 0;
-		top: $headerHeight;
-		background-color: $color-white;
-		width: $siderWidth;
-		@include sider($siderWidth, $siderFoldWidth, $headerHeight);
+			background-color: $color-white;
+			padding-top: 10px;
+			width: $siderWidth;
+			display: flex;
+			@include sider($siderWidth, $siderFoldWidth, $headerHeight);
 		}
 
 		&.fold {
-		padding-left: $siderFoldWidth;
-		.app-layout-sider {
-			width: $siderFoldWidth;
-		}
+			.app-layout-sider {
+				width: $siderFoldWidth;
+			}
 		}
 	}
 	.app-layout-body {
 		min-height: 100%;
 		overflow-y: auto;
 		transition: width 0.3s;
+		padding-top: 10px;
 	}
 	.layout-breadcrumb {
 		background-color: $color-white;
