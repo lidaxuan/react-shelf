@@ -11,15 +11,21 @@ import { ConfigProvider } from 'antd';
 import zhCN from 'antd/lib/locale/zh_CN';
 // 项目路由
 import Routers from 'src/routers/index';
+import store from '../store/index';
+import { Provider } from 'react-redux';
 
 import('./config');
 
 export default class Main extends React.Component {
   render(): React.ReactElement {
     // 配置 antd 中文模式
-    return (<ConfigProvider locale={zhCN}>
-      <Routers></Routers>
-    </ConfigProvider>);
+    return (
+      <ConfigProvider locale={zhCN}>
+        <Provider store={store}>
+          <Routers></Routers>
+        </Provider>
+      </ConfigProvider>
+    );
   }
 }
 

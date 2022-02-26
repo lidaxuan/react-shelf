@@ -45,6 +45,7 @@ export const routers = {
     loading: '/test/loading',
     reactLazy: '/test/reactLazy',
     scrollText: '/test/scrollText',
+    redux: '/test/redux',
   },
   shop: {
     set: '/shop/set' //首页轮播配置
@@ -150,6 +151,10 @@ export const routerMenus = [
       {
         name: 'scrollText',
         key: 'test.scrollText'
+      },
+      {
+        name: 'redux',
+        key: 'test.redux'
       },
       
     ]

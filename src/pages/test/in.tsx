@@ -70,6 +70,7 @@ export default class In extends Component<any, any> {
     };
     this.add = this.add.bind(this);
   }
+
   @addTwo()
   add() {
     const num = this.state.num + 1;

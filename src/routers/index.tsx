@@ -33,6 +33,7 @@ const Routers: React.FC = function (): React.ReactElement {
       <Route path={config.routers.dashboard} component={Layout}>
         <IndexRoute component={asnyc(() => import('src/pages/home/index'))}></IndexRoute>
         {/* <Route path="/demo1" component={ asnyc(() => import('src/pages/antv/index'))}></Route> */}
+        <Route path={ config.routers.test.redux } component={ asnyc(() => import('src/pages/test/redux'))}></Route>
         <Route path={ config.routers.test.study } component={ asnyc(() => import('src/pages/test/study'))}></Route>
         <Route path={ config.routers.session.starr } component={ asnyc(() => import('src/pages/session/starr'))}></Route>
         <Route path={ config.routers.demo.one } component={ asnyc(() => import('src/test/demo1/index')) }></Route>

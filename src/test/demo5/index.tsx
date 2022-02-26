@@ -20,7 +20,6 @@ import { FormInstance } from 'antd/lib/form';
 import 'src/styles/goods/index.scss';
 
 
-
 interface Props {
   [key: string]: any
 }
@@ -54,8 +53,8 @@ export default class DashBoard extends Component<Props, DashBoardState>  {
     console.log(1);
     this.fetchTableData();
   }
- 
-  
+
+
   tableDel(index: any) {
     console.log(index);
     const table = this.state.list;
@@ -66,24 +65,21 @@ export default class DashBoard extends Component<Props, DashBoardState>  {
   }
   @Loading.Fun()
   protected fetchTableData(): Array<any> {
-    const arr = [];
+    const list = [];
     for (let i = 0; i < 10; i++) {
-      const obj = {
+      list.push({
         name: `李大玄${i}`,
         sex: '1',
         address: '北京',
-        id: i
-      };
-      arr.push(obj);
+        id: i + 1
+      });
     }
     setTimeout(() => {
-      this.setState({
-        list: arr
-      });
+      this.setState({ list });
     }, 1000);
-    return arr;
+    return list;
   }
-  
+
   render() {
     const rowSelection = {
       selectedRowKeys: this.state.selectedRowKeys,
@@ -113,21 +109,21 @@ export default class DashBoard extends Component<Props, DashBoardState>  {
       {
         title: '操作',
         key: 'id',
-        render:(text: string, record:any, index: number)=> {
+        render: (text: string, record: any, index: number) => {
           return (
             <div key={index} >
-              <span onClick={ () => this.tableDel(index) }>删除</span>
+              <span onClick={() => this.tableDel(index)}>删除</span>
             </div>
           );
         },
       },
     ];
-    return(
+    return (
       <div>
         {/* <Button type="primary" onClick={this.fetchTableData}>查询</Button> */}
-        
+
         <div>
-          <Table bordered dataSource={this.state.list} columns={columnsItem} pagination={false} rowKey="id" size="small"/>
+          <Table bordered dataSource={this.state.list} columns={columnsItem} pagination={false} rowKey="id" size="small" />
           <div dangerouslySetInnerHTML={{ __html: JSON.stringify(this.state) }}></div>
         </div>
       </div>

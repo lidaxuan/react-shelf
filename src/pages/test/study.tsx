@@ -2,7 +2,7 @@
  * @Description: 
  * @Author: 李继玄（15201002062@163.com）
  * @Date: 2021-01-26 16:02:32
- * @FilePath: /react-ts/src/pages/test/study.tsx
+ * @FilePath: /react-shelf/src/pages/test/study.tsx
  */
 import React, { Component } from 'react';
 import { Button, Tabs } from 'antd';
@@ -99,3 +99,4 @@ export default class In extends Component<any, any> {
     );
   }
 }
+
